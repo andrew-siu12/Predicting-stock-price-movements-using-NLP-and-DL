@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a93053ff-9790-44b3-a903-8eb55005e81a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Data Preparation-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Data Preparation-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Create_label.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Create_label.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Preparation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Data Preparation.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +88,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="953" />
     <option name="y" value="347" />
     <option name="width" value="1410" />
@@ -272,9 +269,9 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.scrape1" />
       <item itemvalue="Python.download_ticker" />
       <item itemvalue="Python.event_embedding" />
-      <item itemvalue="Python.scrape1" />
       <item itemvalue="Python.scrape2" />
       <item itemvalue="Python.scrape_news" />
       <item itemvalue="Python.tickers" />
@@ -303,8 +300,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="763" y="278" width="1128" height="828" extended-state="1" />
-    <editor active="true" />
+    <frame x="763" y="278" width="1128" height="828" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20695971" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
