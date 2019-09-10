@@ -1,0 +1,13 @@
+{
+    "exp_name": "multi-layer-perceptron",
+    "num_epochs": 100,
+    "learning_rate": 0.001,
+    "optimizer": "adam",
+    "batch_size": 32,
+    "all_classes": true,
+    "padding": "post",
+    "max_sequence_length": 40,
+    "embedding_model_name": "glove.6B.100d.txt",
+    "embedding_dim": 100,
+    "validation_split":0.25
+  }
