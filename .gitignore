@@ -1,4 +1,5 @@
 # Don't track content of these folders
+inputs/
 data/
 catboost_info/
 .ipynb_checkpoints
