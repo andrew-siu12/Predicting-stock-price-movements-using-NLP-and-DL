@@ -12,8 +12,6 @@ class DataGenerator:
         data_file = "../inputs/preprocessed_news.csv"
 
         data_df = pd.read_csv("data_file")
-        cols = ["price_change_short", "price_change_mid", "price_change_long"]
-        price_feat_data = data_df[cols]
         labels = data_df['signal']
         labels = pd.get_dummies(columns=['signal'], data=labels)
 
@@ -28,16 +26,15 @@ class DataGenerator:
         self.word_index = t.word_index
         config.vocab_size = len(self.word_index)
 
-        self.price_train, self.price_test, self.label_train, \
-            self.label_test, self.docs_train, self.docs_test = train_test_split(
-                price_feat_data, labels, docs, stratify=labels,
-                test_size=config.test_size, random_state=42)
+         self.docs_train, self.docs_test, self.label_train, self.label_test, = train_test_split(
+             docs, labels, stratify=labels,
+             test_size=config.test_size, random_state=42)
 
     def get_train_data(self):
-        return self.price_train, self.label_train, self.docs_train
+        return self.docs_train, self.label_train,
 
     def get_test_data(self):
-        return self.price_test, self.label_test, self.docs_test
+        return self.docs_test, self.label_test
 
     def get_word_index(self):
         return self.word_index
