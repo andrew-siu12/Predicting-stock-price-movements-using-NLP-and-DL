@@ -53,6 +53,3 @@ def get_price_from_yahoo(ticker, start_date, end_date):
 
     return quote_dict
 
-
-if __name__ == "__main__":
-    get_stock_prices()

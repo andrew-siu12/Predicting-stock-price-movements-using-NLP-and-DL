@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 import numpy as np
 # Credit https://github.com/WayneDW/Sentiment-Analysis-in-Event-Driven-Stock-Price-Movement-Prediction
 def dateGenerator(numdays): # generate N days until now, eg [20151231, 20151230]
+
     base = datetime.datetime.strptime("20190621", "%Y%m%d")
     date_list = [base - datetime.timedelta(days=x) for x in range(0, numdays)]
     for i in range(len(date_list)):
@@ -170,10 +171,3 @@ class ReutersCrawler:
         # run task with lowest priority
         for task in delayed_tasks['LOWEST']:
             self.fetch_content(task, date_range)
-
-def main():
-    reuter_crawler = ReutersCrawler()
-    reuter_crawler.run()
-
-if __name__ == "__main__":
-    main()

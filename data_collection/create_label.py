@@ -60,7 +60,11 @@ def calc_mid_long_return(ticker, date, delta, priceSet):
         return False, 0
 
 
-def main():
+def return_to_json():
+    """
+    Write short, mid, long returns of all tickers collected from tickers.py to a json file
+    :return:
+    """
 
     not_in_sp500 = ['BABA', 'BUD', 'BBL', 'BP', 'CHL', 'FMX', 'HSBC',
                     'LIN', 'NVS', 'NVO', 'RY', 'SAP', 'TSM', 'TD',
@@ -92,6 +96,3 @@ def main():
     with open('./inputs/stockReturns.json', 'w') as outfile:
         json.dump(returns, outfile, indent=4)
 
-
-if __name__ == "__main__":
-    main()
