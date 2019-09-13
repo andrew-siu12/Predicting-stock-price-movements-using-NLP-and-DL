@@ -1,12 +1,15 @@
 import csv
-import sys
-
 from urllib.request import urlopen
-
 import numpy as np
 
 
 def get_tickers(percent):
+    """
+    Get the tickers of top percent market cap and write it in the csv file
+    :param percent: int 0-100
+    :return:
+    """
+
     assert isinstance(percent, int)
     file = open('./inputs/tickerList.csv', 'w')
     writer = csv.writer(file, delimiter=',')
@@ -37,17 +40,3 @@ def get_tickers(percent):
         if market_cap < np.percentile(cap_stat, 100 - percent):
             continue
         writer.writerow(data)
-
-
-def main():
-    if len(sys.argv) < 2:
-        print('Usage: ./all_tickers.py <int_percent>')
-        return
-    top_n = sys.argv[1]
-    get_tickers(int(top_n))  # keep the top N% market-cap companies
-
-    print("Sucessfully retrived all the tickers")
-
-
-if __name__ == "__main__":
-    main()
