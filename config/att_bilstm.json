@@ -1,0 +1,17 @@
+{
+    "exp_name": "FastText+Attention_BiLSTM",
+    "padding": "post",
+    "max_sequence_length": 35,
+    "embedding_dim": 300,
+    "test_size": 0.2,
+    "units": 64,
+    "lstm_Dropout": 0.2761147295123246,
+    "Dropout_1": 0.2924657061733502,
+    "Dropout_2": 0.45531035147751703,
+    "Dense": 128,
+    "Dense_1": 128,
+    "embedding_model_name": "wiki-news-300d-1M-subword.vec",
+    "num_epochs": 50,
+    "batch_size": 32,
+    "validation_split": 0.2
+}

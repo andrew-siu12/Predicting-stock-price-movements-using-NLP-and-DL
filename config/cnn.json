@@ -1,0 +1,18 @@
+{
+    "exp_name": "FastTextCNN",
+    "padding": "post",
+    "max_sequence_length": 35,
+    "embedding_dim": 300,
+    "test_size": 0.2,
+    "filters": 4,
+    "pool_size": 6,
+    "Dropout": 0.35325333987142893,
+    "Dropout_1": 0.656281059431072,
+    "Dropout_2": 0.2930424842903513,
+    "Dense": 128,
+    "Dense_1": 128,
+    "embedding_model_name": "wiki-news-300d-1M-subword.vec",
+    "num_epochs": 50,
+    "batch_size": 32,
+    "validation_split": 0.2
+}
