@@ -1,6 +1,6 @@
 # Predicting-stock-price-movements-using-news
 
-Using recent advancement in NLP to classify sentiment of news headline in order to predict stock price movements.
+Using NLP and Deep learning to classify sentiment of news headline in order to predict stock price movements.
 
 #### -- Project Status: [Active]
 
@@ -15,7 +15,7 @@ Using recent advancement in NLP to classify sentiment of news headline in order 
 
 In the internet age, the interest in online news websites have grown rapidly and it allows publisher to produce hundreds of news per day.  This is especially the case for financial market since it changes every seconds. This provides a huge amount of unstructured data that can be analyzed to incorporate into investors decision making process. However, finding and monitoring opinion sites on the Web and distilling the information contained in them remains a formidable task because of the proliferation of diverse sites.  Each site typically contains a huge volume of opinion text that is not always easily deciphered.  The average human reader will have difficulty extracting and summarizing the opinions in sites. 
 
-In this project, we will perform multi-class sentiment analysis to predict the stock price movement by analyzing news articles and tries to classify news as postive, neutral and negative (up, stay, down in pricing sense). Traditionally, the approach to perform sentiment analysis is by using rule-based method.  Data mining involves extract information from a data set and transform it intoan understandable structure.  However, using data mining to extract useful features andselect the best of those is very challenging to undertake in high amount of data settings.For this reason, we are going to adopt Deep learning to determine the price of stocks andthe overall market based on financial news data.
+In this project, we will perform multi-class text classification to predict the stock price movement by analyzing news articles and market information to classify whether stocks goes up, stay, down. Traditionally, the approach to perform sentiment analysis is by using rule-based method.  Data mining involves extract information from a data set and transform it intoan understandable structure.  However, using data mining to extract useful features andselect the best of those is very challenging to undertake in high amount of data settings.For this reason, we are going to adopt Deep learning to determine the price of stocks andthe overall market based on financial news data.
 
 
 ### Data
