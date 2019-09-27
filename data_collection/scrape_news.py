@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 import numpy as np
 # Credit https://github.com/WayneDW/Sentiment-Analysis-in-Event-Driven-Stock-Price-Movement-Prediction
 def dateGenerator(numdays): # generate N days until now, eg [20151231, 20151230]
-    base = datetime.datetime.strptime("20190621", "%Y%m%d")
+    base = datetime.datetime.strptime("20170221", "%Y%m%d")
     date_list = [base - datetime.timedelta(days=x) for x in range(0, numdays)]
     for i in range(len(date_list)):
         date_list[i] = date_list[i].strftime("%Y%m%d")
@@ -15,7 +15,7 @@ def dateGenerator(numdays): # generate N days until now, eg [20151231, 20151230]
 
 def generate_past_n_days(numdays):
     """Generate N days until now, e.g., [20151231, 20151230]."""
-    base = datetime.datetime.strptime("20190621", "%Y%m%d")
+    base = datetime.datetime.strptime("20170221", "%Y%m%d")
     date_range = [base - datetime.timedelta(days=x) for x in range(0, numdays)]
     return [x.strftime("%Y%m%d") for x in date_range]
 
@@ -71,7 +71,7 @@ class ReutersCrawler:
         url = "https://www.reuters.com/finance/stocks/company-news/" + ticker + suffix[exchange]
 
         ticker_failed = open(self.failed_reuters_filename, 'a+', encoding='utf-8')
-        today = datetime.datetime.strptime("21/06/19", "%d/%m/%y")
+        today = datetime.datetime.strptime("21/02/17", "%d/%m/%y")
 
         news_num = self.get_news_num_whenever(url)
         if news_num:
@@ -144,7 +144,7 @@ class ReutersCrawler:
                 fout.write(','.join([ticker, task[1], timestamp, title, body, news_type]) + '\n')
         return True
 
-    def run(self, numdays=2191):
+    def run(self, numdays=2057):
         """Start crawler back to numdays"""
         finished_tickers = self.load_finished_tickers()
         failed_tickers = self.load_failed_tickers()
