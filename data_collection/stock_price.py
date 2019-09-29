@@ -25,7 +25,7 @@ def get_stock_prices():
         json.dump(price_set, outfile, indent=4)
 
 
-def repeat_download(ticker, start_date='2013-06-21', end_date='2017-02-21'):
+def repeat_download(ticker, start_date='2011-07-06', end_date='2017-02-21'):
     repeat_times = 2  # repeat download for N times
     for i in range(repeat_times):
         try:
