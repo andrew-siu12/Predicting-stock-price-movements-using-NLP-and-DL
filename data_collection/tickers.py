@@ -14,7 +14,7 @@ def get_tickers(percent):
     file = open('./inputs/tickerList.csv', 'w')
     writer = csv.writer(file, delimiter=',')
     cap_stat, output = np.array([]), []
-    for exchange in ["NASDAQ", "NYSE"]:
+    for exchange in ["NASDAQ", "NYSE", "AMEX"]:
         url = "http://www.nasdaq.com/screening/companies-by-industry.aspx?exchange="
         repeat_times = 10 # repeat downloading in case of http error
         for _ in range(repeat_times):

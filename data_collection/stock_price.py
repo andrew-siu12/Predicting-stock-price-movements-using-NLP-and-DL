@@ -7,10 +7,6 @@ import json
 import yfinance as yf
 
 
-# def calc_finished_ticker():
-#     os.system("awk -F',' '{print $1}' ./inputs/news_reuters.csv | sort | uniq > ./inputs/tickers.txt")
-
-
 def get_stock_prices():
     fin = open('./inputs/tickers.txt')
     output = './inputs/stockPrices_raw.json'
@@ -29,7 +25,7 @@ def get_stock_prices():
         json.dump(price_set, outfile, indent=4)
 
 
-def repeat_download(ticker, start_date='2013-06-21', end_date='2019-06-21'):
+def repeat_download(ticker, start_date='2013-06-21', end_date='2017-02-21'):
     repeat_times = 2  # repeat download for N times
     for i in range(repeat_times):
         try:

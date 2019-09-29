@@ -36,39 +36,30 @@ def calc_mid_long_return(ticker, date, delta, priceSet):
             nextDate = (baseDate + datetime.timedelta(days=1)).strftime("%Y-%m-%d")
 
     try:
-        if delta == 1:
-            return_self = (priceSet[ticker]['adjClose'][date] - priceSet[ticker]['open'][date]) / \
-                          priceSet[ticker]['open'][date]
-            return_sp500 = (priceSet['^GSPC']['adjClose'][date] - priceSet['^GSPC']['open'][date]) / \
-                           priceSet['^GSPC']['open'][date]
-            return_self_per = round(return_self, 4) * 100
-            return_sp500_per = round(return_sp500, 4) * 100
+        return_self = (priceSet[ticker]['adjClose'][date] - priceSet[ticker]['adjClose'][prevDate]) / \
+                      priceSet[ticker]['adjClose'][prevDate]
+        return_sp500 = (priceSet['^GSPC']['adjClose'][date] - priceSet['^GSPC']['adjClose'][prevDate]) / \
+                       priceSet['^GSPC']['adjClose'][prevDate]
+        return_self_per = round(return_self, 4) * 100
+        return_sp500_per = round(return_sp500, 4) * 100
 
-        else:
-            return_self = (priceSet[ticker]['adjClose'][date] - priceSet[ticker]['adjClose'][prevDate]) / \
-                          priceSet[ticker]['adjClose'][prevDate]
-            return_sp500 = (priceSet['^GSPC']['adjClose'][date] - priceSet['^GSPC']['adjClose'][prevDate]) / \
-                           priceSet['^GSPC']['adjClose'][prevDate]
-            return_self_per = round(return_self, 4) * 100
-            return_sp500_per = round(return_sp500, 4) * 100
+        # else:
+        #     return_self = (priceSet[ticker]['adjClose'][date] - priceSet[ticker]['adjClose'][prevDate]) / \
+        #                   priceSet[ticker]['adjClose'][prevDate]
+        #     return_sp500 = (priceSet['^GSPC']['adjClose'][date] - priceSet['^GSPC']['adjClose'][prevDate]) / \
+        #                    priceSet['^GSPC']['adjClose'][prevDate]
+        #     return_self_per = round(return_self, 4) * 100
+        #     return_sp500_per = round(return_sp500, 4) * 100
 
-        if ticker in not_in_sp500:
-            return True, return_self_per
-        else:
-            return True, return_self_per - return_sp500_per  # relative return
+        return True, return_self_per - return_sp500_per  # relative return
     except Exception as e:
         return False, 0
-
 
 def return_to_json():
     """
     Write short, mid, long returns of all tickers collected from tickers.py to a json file
     :return:
     """
-
-    not_in_sp500 = ['BABA', 'BUD', 'BBL', 'BP', 'CHL', 'FMX', 'HSBC',
-                    'LIN', 'NVS', 'NVO', 'RY', 'SAP', 'TSM', 'TD',
-                    'TOT', 'TM', 'UN', 'UL']
 
     raw_price_file = 'inputs/stockPrices_raw.json'
     with open(raw_price_file) as file:
