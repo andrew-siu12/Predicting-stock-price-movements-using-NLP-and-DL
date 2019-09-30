@@ -86,17 +86,21 @@ There are no public avaliable dataset for stock news headline. We first scraped 
 
 ## Results
 All three models were trained for 50 epochs and batch size of 32 with early stopping. We used bayesian optimisation to tune the hyperparameters. All three models achieved similar results after tuning. CNN achieved best loss and f1 score out of the three models. BiLSTM with self-attention has the highest accuracy. However, the tuning and training time of CNN is the fastest. We benchmarked these models against all random choice baseline model of 33.3%. The result of all three models show improvement of 95%.  These results suggests that combining word-embeddings and market information and the use of neural networks can achieve a good result. 
+
 | Model     | Loss | Accuracy| f1 score| 
 | -------------   |:--------:| --------:| -------:|
 | CNN| 0.822622| 0.645083 |0.664479|
 | BiLSTM | 0.825816| 0.64086| 0.661145| 
 | BiLSTM with self-attention | 0.825047| 0.645887| 0.664052 |
 
+
 <p float="left">
   <img src="https://i.imgur.com/xZD5RKy.png" width="350" /> 
   <img src="https://i.imgur.com/dzYF0Bj.png" width="350" />
   <img src="https://i.imgur.com/HuE7jtm.png" width="350" />
 </p>
+
+
 
 
 ## Improvement
