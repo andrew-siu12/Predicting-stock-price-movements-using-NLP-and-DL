@@ -1,6 +1,6 @@
 # Predicting-stock-price-movements-using-news
 
-Using NLP and Deep learning to classify sentiment of news headline in order to predict stock price movements.
+Using NLP and Deep learning to predict stock price movements.
 
 #### -- Project Status: [Active]
 
@@ -99,9 +99,6 @@ All three models were trained for 50 epochs and batch size of 32 with early stop
   <img src="https://i.imgur.com/dzYF0Bj.png" width="350" />
   <img src="https://i.imgur.com/HuE7jtm.png" width="350" />
 </p>
-
-
-
 
 ## Improvement
 
