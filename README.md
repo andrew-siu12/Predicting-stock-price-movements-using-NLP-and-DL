@@ -95,9 +95,9 @@ All three models were trained for 50 epochs and batch size of 32 with early stop
 
 
 <p float="left">
-  <img src="https://i.imgur.com/xZD5RKy.png" width="350" /> 
-  <img src="https://i.imgur.com/dzYF0Bj.png" width="350" />
-  <img src="https://i.imgur.com/HuE7jtm.png" width="350" />
+  <img src="https://i.imgur.com/xZD5RKy.png" width="500" /> 
+  <img src="https://i.imgur.com/dzYF0Bj.png" width="500" />
+  <img src="https://i.imgur.com/HuE7jtm.png" width="500" />
 </p>
 
 ## Improvement
