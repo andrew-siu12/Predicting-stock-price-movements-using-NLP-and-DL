@@ -6,7 +6,7 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import numpy as np
 # Credit https://github.com/WayneDW/Sentiment-Analysis-in-Event-Driven-Stock-Price-Movement-Prediction
-def dateGenerator(numdays): # generate N days until now, eg [20151231, 20151230]
+def dateGenerator(numdays): 
 
     date_list = [base - datetime.timedelta(days=x) for x in range(0, numdays)]
     for i in range(len(date_list)):
@@ -44,8 +44,7 @@ class ReutersCrawler:
         self.news_filename = './inputs/news_reuters.csv'
 
     def load_finished_tickers(self):
-        # when we restart a task, we may call calc_finished_ticker() in crawler/yahoo_finance.py
-        # so that we can load the already finished reuters if any
+        # load the already finished reuters news if any
         return set(self._load_from_file(self.finished_reuters_filename))
 
     def load_failed_tickers(self):
